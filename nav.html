@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="style.css" type="text/css">
+<div class="navbar">
+	  <div class="search-container">
+	  	<form action="BooksData.php" method="post">
+	  		<input type="text" name="q" id="search" placeholder="Search....">
+	  		<button type="submit"><i class="fa fa-search"></i></button>
+	  	</form>
+	  </div>
+	  <a href="login.php">Login</a>
+	  <a href="SignUpPage.php">SignUp</a>
+	  <div class="dropdown">
+	   <button class="dropbtn">PopularBooks<i class="fa fa-caret-down"></i></button>
+    	<div class="dropdown-content" style="font-size: 20px;">
+    		
+		      <a href="BooksData.php" style="font-size: 15px">The Alchemist</a>
+		      <a href="BooksData.php" style="font-size: 15px">Lifes Amazing Secrets</a>
+		      <a href="BooksData.php" style="font-size: 15px">Attitude is Everything</a>
+		       <a href="BooksData.php" style="font-size: 15px">BarackObama</a>
+		        <a href="BooksData.php" style="font-size: 15px">Dieting at the age of eating</a>
+    	</div>
+      </div> 
+      <a href="about.pdf">AboutUs</a>
+	  <a href="project.html">Home</a>
+	 <script type="text/javascript">
+	 	$(#search).on("keyup",function(){
+	 		var search_term=$(this).val();
+	 		
+	 	});
+
+	 </script>
+ </div>
+

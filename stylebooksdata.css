@@ -1,0 +1,33 @@
+body{
+	position: absolute;
+}
+.sidenav{
+	float: left;
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	background-color: #008080;
+	z-index: 1;
+	overflow: hidden;
+	padding-top: 20px;
+	
+	
+}
+.sidenav a{
+	font-size: 20px;
+	display: block;
+	text-decoration: none;
+	padding: 6px 8px 6px 16px;
+	color: #FFFFFF;
+}
+.sidenav a:hover{
+	color:#800000;
+}
+.books{
+	margin-left: 350px;
+	/*margin-right: 100px;*/
+	
+
+}
+
+

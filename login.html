@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoginPage</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			background-image: url("signupimage.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.header{
+			top: 0;
+			background-color: #1e90ff;
+			position: fixed;
+			overflow: hidden;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="header"></div>
+	<script>
+		
+			$("#header").load("nav.html");
+		
+	</script>
+	<?php
+
+		$connect=mysqli_connect("localhost","root","","signuppage") or die("Failed");
+		if(!empty($_POST['login'])){
+		$Email=$_POST['email'];
+		$Password=$_POST['password'];
+		$query="select * from registration where Email='$Email' and Password='$Password'";
+		$result=mysqli_query($connect, $query);
+		$count=mysqli_num_rows($result);
+		if($count>0)
+		{
+			echo "sucess";
+		}
+		else
+		{
+			echo "sorry";
+		}
+
+		}
+	?>
+	<center style="margin-top: 20px;">
+		<div class="login-form">
+			<div class="image">
+				<i class="fa fa-user icon"></i>
+			</div>
+			
+			<h2>Login Now</h2>
+			<form action="loginpage.php" method="post">
+				<label for="email">Email: </label>
+				<input type="email" placeholder="Enter ut email" class="input-box" name="email" required><br><br>
+				<label for="Password">Password: </label>
+				<input type="password" name="password" class="input-box" placeholder="Enter ur password" required>
+				<button type="submit" class="login" name="login">Login</button> 
+				<p class="or">OR</p>
+				<button type="button" class="facebook">Login With Facebook</button>
+				<p>Don't  have an account ? <a href="#">SignUp</a></p>
+			</form>
+		</div>
+
+</body>
+</html>
